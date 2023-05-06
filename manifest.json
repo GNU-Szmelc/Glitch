@@ -1,0 +1,45 @@
+{
+  "manifest_version": 3,
+  "name": "GLITCH",
+  "version": "6.9",
+  "description": "Glitches stuff",
+  "icons": {
+    "128": "icon128.png",
+		"500": "x.png"
+  },
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "declarativeNetRequest",
+    "tabs"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "GLITCH",
+    "default_icon": "x.png",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "darkmode.js"
+      ],
+      "all_frames": true,
+      "run_at": "document_start",
+      "declarative_net_request": {
+        "rule_resources": [
+          {
+            "id": "GLITCH",
+            "enabled": false,
+            "path": "/rules.json"
+          }
+        ]
+      }
+    }
+  ]
+}
