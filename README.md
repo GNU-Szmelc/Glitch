@@ -1,4 +1,4 @@
-# DARKMODE ENFORCER PLUGIN v1
+# GLITCH-1.3
 
 - Obese Lord, I have good and bad news.
 - Start with the bad one.
